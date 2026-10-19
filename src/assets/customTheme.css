@@ -1,0 +1,135 @@
+/*
+ * Theme: Vivarium (Light + Dark)
+ * Description: Calm, natural, green, and rounded theme for Bootstrap 5.3.8
+ * Light is the default; dark applies with data-bs-theme="dark" (or .theme-dark).
+ */
+
+/* ==========================================================================
+   LIGHT MODE (default)
+   ========================================================================== */
+
+:root,
+[data-bs-theme="light"] {
+  /* Primary Brand Colors */
+  --bs-primary: #3a5a40;          /* Deep moss green */
+  --bs-primary-rgb: 58, 90, 64;   /* RGB breakdown for opacity utilities */
+
+  /* Body Background & Text */
+  --bs-body-bg: #f7f9f6;          /* Soft, natural off-white with warm green undertone */
+  --bs-body-color: #2b332b;       /* Deep earthy charcoal for crisp readability */
+
+  /* Link Colors */
+  --bs-link-color: #3a5a40;       /* Primary green for standard links */
+  --bs-link-color-rgb: 58, 90, 64;/* Plain r,g,b format required for Bootstrap's rgba link logic */
+  --bs-link-hover-color: #2c4431; /* Richer, darker moss green on hover */
+  --bs-link-hover-color-rgb: 44, 68, 49; /* Plain r,g,b format for hover state */
+
+  /* Component Backgrounds */
+  --bs-tertiary-bg: #eef2ed;      /* Soft muted greenish-gray for cards and containers */
+  --bs-tertiary-bg-rgb: 238, 242, 237; /* Plain r,g,b format for tertiary background utilities */
+
+  /* Rounded Style (Increased Border Radius) */
+  --bs-border-radius: 0.75rem;    /* Default rounded corners (12px) */
+  --bs-border-radius-sm: 0.5rem;  /* Small elements */
+  --bs-border-radius-lg: 1rem;    /* Large cards and containers */
+  --bs-border-radius-xl: 1.25rem; /* Extra large components */
+  --bs-border-radius-xxl: 2rem;   /* Prominent rounded containers */
+  --bs-border-radius-pill: 50rem; /* Fully rounded pill buttons/badges */
+}
+
+/* Button Overrides via --bs-btn-* variables (Light) */
+.btn-primary {
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: #2f4834;
+  --bs-btn-hover-border-color: #283d2d;
+  --bs-btn-active-bg: #283d2d;
+  --bs-btn-active-border-color: #213224;
+  --bs-btn-focus-shadow-rgb: var(--bs-primary-rgb);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: var(--bs-primary);
+  --bs-btn-hover-border-color: var(--bs-primary);
+  --bs-btn-active-bg: var(--bs-primary);
+  --bs-btn-active-border-color: var(--bs-primary);
+  --bs-btn-focus-shadow-rgb: var(--bs-primary-rgb);
+}
+
+/* Form Control Focus Override (Light) */
+.form-control:focus {
+  border-color: #3a5a40;
+  box-shadow: 0 0 0 0.25rem rgba(58, 90, 64, 0.25);
+}
+
+/* ==========================================================================
+   DARK MODE
+   Selectors below are more specific than the light overrides above,
+   so they win automatically when dark mode is active.
+   ========================================================================== */
+
+[data-bs-theme="dark"],
+.theme-dark {
+  /* Primary Brand Colors (Vibrant Mint Green for visibility) */
+  --bs-primary: #52b788;          /* Bright warm mint green */
+  --bs-primary-rgb: 82, 183, 136; /* RGB breakdown for opacity utilities */
+
+  /* Body Background & Text */
+  --bs-body-bg: #121b14;          /* Deep nocturnal forest green/charcoal */
+  --bs-body-color: #e8f0e9;       /* Pale sage text for high, soft contrast */
+
+  /* Link Colors */
+  --bs-link-color: #74c69d;       /* Soft pastel mint for clear, accessible links */
+  --bs-link-color-rgb: 116, 198, 157;
+  --bs-link-hover-color: #95d5b2; /* Lighter mint accent on hover */
+  --bs-link-hover-color-rgb: 149, 213, 178;
+
+  /* Component Backgrounds */
+  --bs-tertiary-bg: #1e2a21;      /* Deep muted moss for cards, navbars, and containers */
+  --bs-tertiary-bg-rgb: 30, 42, 33;
+
+  /* Rounded Style (Matching Light Theme) */
+  --bs-border-radius: 0.75rem;
+  --bs-border-radius-sm: 0.5rem;
+  --bs-border-radius-lg: 1rem;
+  --bs-border-radius-xl: 1.25rem;
+  --bs-border-radius-xxl: 2rem;
+  --bs-border-radius-pill: 50rem;
+}
+
+/* Button Overrides via --bs-btn-* variables (Dark) */
+[data-bs-theme="dark"] .btn-primary,
+.theme-dark .btn-primary {
+  --bs-btn-color: #0e150f;        /* Dark text on bright primary button */
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-color: #0e150f;
+  --bs-btn-hover-bg: #40916c;
+  --bs-btn-hover-border-color: #40916c;
+  --bs-btn-active-color: #0e150f;
+  --bs-btn-active-bg: #2d6a4f;
+  --bs-btn-active-border-color: #2d6a4f;
+  --bs-btn-focus-shadow-rgb: var(--bs-primary-rgb);
+}
+
+[data-bs-theme="dark"] .btn-outline-primary,
+.theme-dark .btn-outline-primary {
+  --bs-btn-color: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-color: #0e150f;
+  --bs-btn-hover-bg: var(--bs-primary);
+  --bs-btn-hover-border-color: var(--bs-primary);
+  --bs-btn-active-color: #0e150f;
+  --bs-btn-active-bg: var(--bs-primary);
+  --bs-btn-active-border-color: var(--bs-primary);
+  --bs-btn-focus-shadow-rgb: var(--bs-primary-rgb);
+}
+
+/* Form Control Focus Override (Dark) */
+[data-bs-theme="dark"] .form-control:focus,
+.theme-dark .form-control:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+}
